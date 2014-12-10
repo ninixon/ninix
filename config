@@ -1,0 +1,38 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	hideDotFiles = dotGitOnly
+[remote "example"]
+	url = git://example.com/project.git
+	fetch = +refs/heads/*:refs/remotes/example/*
+[gui]
+	wmstate = zoomed
+	geometry = 887x447+100+100 767 465
+[diff]
+	tool = vsdiffmerge
+[difftool]
+	prompt = true
+[difftool "vsdiffmerge"]
+	cmd = \"N:\\vs14\\Common7\\IDE\\vsdiffmerge.exe\" \"$LOCAL\" \"$REMOTE\" //t
+	keepbackup = false
+	trustexistcode = true
+[merge]
+	tool = vsdiffmerge
+[mergetool]
+	prompt = true
+[mergetool "vsdiffmerge"]
+	cmd = \"N:/vs14/Common7/IDE/vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m
+	keepbackup = false
+	trustexistcode = true
+[remote "bare"]
+	push = refs/remotes/*:refs/heads/*
+[remote "dfg"]
+	url = ftp://ftp.kde.org/pub/kde/devel/other_libs
+	fetch = +refs/heads/*:refs/remotes/dfg/*
+[remote "dgh"]
+	url = http://download.kde.org
+	fetch = +refs/heads/*:refs/remotes/dgh/*
