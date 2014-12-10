@@ -1,0 +1,42 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+	hideDotFiles = dotGitOnly
+[remote "staging"]
+	url = git://git.kernel.org/.../gregkh/staging.git
+	fetch = +refs/heads/*:refs/remotes/staging/*
+[remote "example"]
+	url = git://example.com/project.git
+	fetch = +refs/heads/*:refs/remotes/example/*
+[gui]
+	wmstate = zoomed
+	geometry = 887x447+100+100 767 465
+[diff]
+	tool = vsdiffmerge
+[difftool]
+	prompt = true
+[difftool "vsdiffmerge"]
+	cmd = \"N:\\vs14\\Common7\\IDE\\vsdiffmerge.exe\" \"$LOCAL\" \"$REMOTE\" //t
+	keepbackup = false
+	trustexistcode = true
+[merge]
+	tool = vsdiffmerge
+[mergetool]
+	prompt = true
+[mergetool "vsdiffmerge"]
+	cmd = \"N:\\vs14\\Common7\\IDE\\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m
+	keepbackup = false
+	trustexistcode = true
+[remote "dxremo"]
+	url = 
+	fetch = +refs/heads/*:refs/remotes/dxremo/*
+[remote "REP"]
+	url = https://repository.cloudera.com/content/repositories/third-party/
+	fetch = +refs/heads/*:refs/remotes/REP/*
+[remote "WWW"]
+	url = https://repository.cloudera.com/content/repositories/third-party/.index/nexus-maven-repository-index.properties.md5
+	fetch = +refs/heads/*:refs/remotes/WWW/*
